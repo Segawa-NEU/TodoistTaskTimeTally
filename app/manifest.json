@@ -1,0 +1,22 @@
+{
+    "name": "Todoist Task Time Tally",
+    "version": "1.0",
+    "description": "Set lable like 10min, 30min and we will tally up the time and show it on icon of your toolbar",
+    "icons": {
+      "128": "icon_128.png"
+    },
+    "browser_action": {
+        "default_icon": "icon_128.png"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://todoist.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "manifest_version": 2
+}
